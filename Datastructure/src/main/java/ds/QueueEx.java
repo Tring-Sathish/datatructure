@@ -5,12 +5,12 @@ import java.util.*;
 import datastructure.*;
 
 public class QueueEx {
-  int queue[] = new int[3];
+  int[] queue = new int[3];
   int len = queue.length;
   int front = -1;
   int rear = -1;
   int ch;
-  Scanner S = new Scanner(System.in);
+  Scanner sc = new Scanner(System.in);
 
   public void callQueue() {
     while (ch <= 3) {
