@@ -6,8 +6,8 @@ import datastructure.*;
 
 public class StackEx {
     int ch;
-    Scanner S = new Scanner(System.in);
-    int s[] = new int[3];
+    Scanner sc = new Scanner(System.in);
+    int[] s = new int[3];
     int len = s.length;
     int tos = -1;
 
@@ -16,11 +16,11 @@ public class StackEx {
         while (ch <= 3) {
             System.out.print("\n1. PUSH\n2. POP\n3. DISPLAY\n4. Exit\n");
             System.out.print("Choose the Action : ");
-            ch = S.nextInt();
+            ch = sc.nextInt();
             switch (ch) {
                 case 1:
                     System.out.print("\nEnter Your Element : ");
-                    int ele = S.nextInt();
+                    int ele = sc.nextInt();
                     push(ele);
                     break;
                 case 2:
