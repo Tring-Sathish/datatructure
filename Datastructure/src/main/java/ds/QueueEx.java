@@ -16,14 +16,14 @@ public class QueueEx {
     while (ch <= 3) {
       System.out.println("\n1. ENQUEUE \n2. DEQUEUE \n3. DISPLAY\n4. Exit\n");
       System.out.print("\nEnter Your Choice : ");
-      ch = S.nextInt();
+      ch = sc.nextInt();
       switch (ch) {
         case 1:
           if (rear == len)
             System.out.println("Queue is full");
           else {
             System.out.print("Enter a Elements:");
-            int ele = S.nextInt();
+            int ele = sc.nextInt();
             enqueue(ele);
           }
           break;
