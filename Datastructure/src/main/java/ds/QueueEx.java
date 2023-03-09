@@ -59,7 +59,7 @@ public class QueueEx {
     if (front == -1 || rear < 0)
       logger.info("The Queue is Empty");
     else {
-      logger.info(queue[front] + " is removed from the Queue");
+      logger.debug(queue[front] + " is removed from the Queue");
       front++;
     }
   }
@@ -71,7 +71,7 @@ public class QueueEx {
     else {
       logger.info("Display : ");
       for (i = front; i <= rear; i++)
-        logger.info(queue[i] + "\t");
+        logger.debug(queue[i] + "\t");
     }
   }
 }
