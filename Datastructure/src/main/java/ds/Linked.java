@@ -1,11 +1,12 @@
 package ds;
 
 import java.util.Scanner;
-
+import java.util.logging.Logger;
 import datastructure.*;
 
 public class Linked {
     Node head;
+    Logger logger = Logger.getLogger("Datastructure");
 
     class Node {
         int data;
@@ -34,7 +35,7 @@ public class Linked {
     public void display() {
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.data + " ");
+            logger.info(temp.data + " ");
             temp = temp.next;
         }
     }
@@ -85,38 +86,37 @@ public class Linked {
 
     public void calllinkedist() {
         Linked list = new Linked();
-        Scanner sc = new Scanner(System.in);
+        Scanner S = new Scanner(System.in);
         int ch = 0;
-        final String s = "Enter the value : ";
         while (ch <= 3) {
-            System.out.println(
+            logger.info(
                     "\n1. Insert At Begin \n2. Insert At Postion \n3. Insert At End\n4. Delete At Position\n5. Display\n6. Exit\n");
-            System.out.print("\nEnter Your Choice : ");
-            ch = sc.nextInt();
+            logger.info("\nEnter Your Choice : ");
+            ch = S.nextInt();
             switch (ch) {
                 case 1:
-                    System.out.println(s);
-                    int val = sc.nextInt();
+                    logger.info("Enter the value : ");
+                    int val = S.nextInt();
                     list.insertAtBegining(val);
                     break;
 
                 case 2:
-                    System.out.println("Enter the position : ");
-                    int pos = sc.nextInt();
-                    System.out.println(s);
-                    val = sc.nextInt();
+                    logger.info("Enter the position : ");
+                    int pos = S.nextInt();
+                    logger.info("Enter the value : ");
+                    val = S.nextInt();
                     list.insertAtPos(pos, val);
                     break;
 
                 case 3:
-                    System.out.println(s);
-                    val = sc.nextInt();
+                    logger.info("Enter the value : ");
+                    val = S.nextInt();
                     list.insertAtEnd(val);
                     break;
 
                 case 4:
-                    System.out.println("Enter the position : ");
-                    pos = sc.nextInt();
+                    logger.info("Enter the position : ");
+                    pos = S.nextInt();
                     list.deleteAtPos(pos);
                     break;
 
@@ -129,7 +129,7 @@ public class Linked {
                     break;
 
                 default:
-                    System.out.print("Enter the valid choice : ");
+                    logger.info("Enter the valid choice : ");
                     break;
             }
         }
