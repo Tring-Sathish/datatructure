@@ -1,26 +1,27 @@
 package ds;
 
 import java.util.*;
-
+import java.util.logging.Logger;
 import datastructure.*;
 
 public class StackEx {
     int ch;
-    Scanner sc = new Scanner(System.in);
-    int[] s = new int[3];
+    Scanner S = new Scanner(System.in);
+    Logger logger = Logger.getLogger("Datastructure");
+    int s[] = new int[3];
     int len = s.length;
     int tos = -1;
 
     public void callStack() {
 
         while (ch <= 3) {
-            System.out.print("\n1. PUSH\n2. POP\n3. DISPLAY\n4. Exit\n");
-            System.out.print("Choose the Action : ");
-            ch = sc.nextInt();
+            logger.info("\n1. PUSH\n2. POP\n3. DISPLAY\n4. Exit\n");
+            logger.info("Choose the Action : ");
+            ch = S.nextInt();
             switch (ch) {
                 case 1:
-                    System.out.print("\nEnter Your Element : ");
-                    int ele = sc.nextInt();
+                    logger.info("\nEnter Your Element : ");
+                    int ele = S.nextInt();
                     push(ele);
                     break;
                 case 2:
@@ -33,7 +34,7 @@ public class StackEx {
                     App.main(null);
                     break;
                 default:
-                    System.out.println(" Invalid choice");
+                    logger.info(" Invalid choice");
                     break;
             }
         }
@@ -41,19 +42,19 @@ public class StackEx {
 
     void push(int item) {
         if (tos == len - 1) {
-            System.out.println("The stack is full");
+            logger.info("The stack is full");
         } else {
             tos++;
             s[tos] = item;
-            System.out.println(item + " is pushed  to stack\n ");
+            logger.info(item + " is pushed  to stack\n ");
         }
     }
 
     void pop() {
         if (tos < 0)
-            System.out.println("\nStack is empty\n");
+            logger.info("\nStack is empty\n");
         else {
-            System.out.println(s[tos] + " is popped from the stack");
+            logger.info(s[tos] + " is popped from the stack");
             tos--;
 
         }
@@ -61,11 +62,11 @@ public class StackEx {
 
     void display() {
         if (tos < 0)
-            System.out.println("stack is empty");
+            logger.info("stack is empty");
         else {
-            System.out.print("Display : ");
+            logger.info("Display : ");
             for (int i = tos; i >= 0; i--) {
-                System.out.print(s[i] + "\t");
+                logger.info(s[i] + "\t");
             }
         }
     }
