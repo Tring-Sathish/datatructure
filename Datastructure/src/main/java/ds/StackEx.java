@@ -6,10 +6,10 @@ import datastructure.*;
 
 public class StackEx {
     int ch;
-    Scanner S = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     Logger logger = Logger.getLogger("Datastructure");
-    int s[] = new int[3];
-    int len = s.length;
+    int[] s = new int[3];
+    int len = sc.length;
     int tos = -1;
 
     public void callStack() {
@@ -17,11 +17,11 @@ public class StackEx {
         while (ch <= 3) {
             logger.info("\n1. PUSH\n2. POP\n3. DISPLAY\n4. Exit\n");
             logger.info("Choose the Action : ");
-            ch = S.nextInt();
+            ch = sc.nextInt();
             switch (ch) {
                 case 1:
                     logger.info("\nEnter Your Element : ");
-                    int ele = S.nextInt();
+                    int ele = sc.nextInt();
                     push(ele);
                     break;
                 case 2:
