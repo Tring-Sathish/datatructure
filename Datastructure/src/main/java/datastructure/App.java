@@ -1,17 +1,18 @@
 package datastructure;
 
 import java.util.*;
-
+import java.util.logging.Logger;
 import ds.*;
 
 public class App {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
+        Logger logger = Logger.getLogger("Datastructure");
         StackEx stack = new StackEx();
         Linked l = new Linked();
         QueueEx que = new QueueEx();
         int choice;
-        System.out.print("\n1. STACK \n2. QUEUE \n3. Linked List \n\nEnter Your Choice : ");
+        logger.info("\n1. STACK \n2. QUEUE \n3. Linked List \n\nEnter Your Choice : ");
         choice = s.nextInt();
         while (choice <= 3) {
             switch (choice) {
@@ -28,7 +29,7 @@ public class App {
                     break;
 
                 default:
-                    System.out.print("Invalid Choice");
+                    logger.info("Invalid Choice");
                     System.exit(0);
                     break;
             }
