@@ -86,37 +86,38 @@ public class Linked {
 
     public void calllinkedist() {
         Linked list = new Linked();
-        Scanner S = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        final msg = "Enter the value : ";
         int ch = 0;
         while (ch <= 3) {
             logger.info(
                     "\n1. Insert At Begin \n2. Insert At Postion \n3. Insert At End\n4. Delete At Position\n5. Display\n6. Exit\n");
             logger.info("\nEnter Your Choice : ");
-            ch = S.nextInt();
+            ch = sc.nextInt();
             switch (ch) {
                 case 1:
-                    logger.info("Enter the value : ");
-                    int val = S.nextInt();
+                    logger.info(msg);
+                    int val = sc.nextInt();
                     list.insertAtBegining(val);
                     break;
 
                 case 2:
                     logger.info("Enter the position : ");
-                    int pos = S.nextInt();
-                    logger.info("Enter the value : ");
-                    val = S.nextInt();
+                    int pos = sc.nextInt();
+                    logger.info(msg);
+                    val = sc.nextInt();
                     list.insertAtPos(pos, val);
                     break;
 
                 case 3:
-                    logger.info("Enter the value : ");
-                    val = S.nextInt();
+                    logger.info(msg);
+                    val = sc.nextInt();
                     list.insertAtEnd(val);
                     break;
 
                 case 4:
                     logger.info("Enter the position : ");
-                    pos = S.nextInt();
+                    pos = sc.nextInt();
                     list.deleteAtPos(pos);
                     break;
 
