@@ -87,6 +87,7 @@ public class Linked {
         Linked list = new Linked();
         Scanner sc = new Scanner(System.in);
         int ch = 0;
+        final String s = "Enter the value : ";
         while (ch <= 3) {
             System.out.println(
                     "\n1. Insert At Begin \n2. Insert At Postion \n3. Insert At End\n4. Delete At Position\n5. Display\n6. Exit\n");
@@ -94,7 +95,7 @@ public class Linked {
             ch = sc.nextInt();
             switch (ch) {
                 case 1:
-                    System.out.println("Enter the value : ");
+                    System.out.println(s);
                     int val = sc.nextInt();
                     list.insertAtBegining(val);
                     break;
@@ -102,13 +103,13 @@ public class Linked {
                 case 2:
                     System.out.println("Enter the position : ");
                     int pos = sc.nextInt();
-                    System.out.println("Enter the value : ");
+                    System.out.println(s);
                     val = sc.nextInt();
                     list.insertAtPos(pos, val);
                     break;
 
                 case 3:
-                    System.out.println("Enter the value : ");
+                    System.out.println(s);
                     val = sc.nextInt();
                     list.insertAtEnd(val);
                     break;
