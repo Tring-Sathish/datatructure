@@ -1,10 +1,10 @@
-package Ds;
+package ds;
 
 import java.util.Scanner;
 
 import DataStructure.*;
 
-public class linkedlist {
+public class Linked {
     Node head;
 
     class Node {
@@ -17,7 +17,7 @@ public class linkedlist {
         }
     }
 
-    public linkedlist() {
+    public Linked() {
         head = null;
     }
 
@@ -84,7 +84,7 @@ public class linkedlist {
     }
 
     public void calllinkedist() {
-        linkedlist list = new linkedlist();
+        Linked list = new Linked();
         Scanner S = new Scanner(System.in);
         int ch = 0;
         while (ch <= 3) {
