@@ -5,26 +5,26 @@ import java.util.logging.Logger;
 import datastructure.*;
 
 public class QueueEx {
-  int queue[] = new int[3];
+  int[] queue = new int[3];
   int len = queue.length;
   int front = -1;
   int rear = -1;
   int ch;
-  Scanner S = new Scanner(System.in);
+  Scanner sc = new Scanner(System.in);
   Logger logger = Logger.getLogger("Datastructure");
 
   public void callQueue() {
     while (ch <= 3) {
       logger.info("\n1. ENQUEUE \n2. DEQUEUE \n3. DISPLAY\n4. Exit\n");
       logger.info("\nEnter Your Choice : ");
-      ch = S.nextInt();
+      ch = sc.nextInt();
       switch (ch) {
         case 1:
           if (rear == len)
             logger.info("Queue is full");
           else {
             logger.info("Enter a Elements:");
-            int ele = S.nextInt();
+            int ele = sc.nextInt();
             enqueue(ele);
           }
           break;
