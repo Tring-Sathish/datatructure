@@ -46,7 +46,7 @@ public class StackEx {
         } else {
             tos++;
             s[tos] = item;
-            logger.info(item + " is pushed  to stack\n ");
+            logger.debug(item + " is pushed  to stack\n ");
         }
     }
 
@@ -54,7 +54,7 @@ public class StackEx {
         if (tos < 0)
             logger.info("\nStack is empty\n");
         else {
-            logger.info(s[tos] + " is popped from the stack");
+            logger.debug(s[tos] + " is popped from the stack");
             tos--;
 
         }
@@ -66,7 +66,7 @@ public class StackEx {
         else {
             logger.info("Display : ");
             for (int i = tos; i >= 0; i--) {
-                logger.info(s[i] + "\t");
+                logger.debug(s[i] + "\t");
             }
         }
     }
